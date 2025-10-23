@@ -616,6 +616,7 @@ PRODUCT_PACKAGES += \
     libadsp_default_listener \
     libadsprpc \
     libagm \
+    libagmmixer \
     libaidenoiser \
     libaidenoiserv2 \
     libaodoptfeature \

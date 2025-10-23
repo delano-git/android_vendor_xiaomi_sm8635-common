@@ -53,7 +53,7 @@ case "$target" in
         setprop vendor.media.target_variant "_kalama"
         ;;
     "pineapple")
-        setprop vendor.mm.target.enable.qcom_parser 524288
+        setprop vendor.mm.target.enable.qcom_parser 0
         case "$soc_hwid" in
             614|632|642|643)
                 setprop vendor.media.target_variant "_cliffs_v0"
