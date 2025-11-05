@@ -52,14 +52,12 @@
         <!-- STORAGE CLK SCALING resource opcode, value-->
         <!-- LLCCBW resource opcode, value-->
         <!-- L3_MEMLAT_MIN_FREQ_PRIME resource opcode, value-->
-        <!-- MPCTLV3_SCHED_CPUSET_TOP_APP resource opcode, value-->
         <!-- Type="1", main launch of 2sec -->
         <Config
            Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="cliffs"
            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
                       0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x40800200, 0xFFF, 0x42C10000, 0x1, 
-                      0x41844000, 0xE3C88, 0x43458000, 0x148200, 0x5FC00000, 0x7f, 0x5FC08000, 0x3,
-                      0x40C3C000, 0xf8" />
+                      0x41844000, 0xE3C88, 0x43458000, 0x148200, 0x5FC00000, 0x7f, 0x5FC08000, 0x3" />
 
     <!--Camera Launch -->
         <!-- MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0, 0XFFF -->
@@ -1865,6 +1863,12 @@
                        0x40800000, 1708, 0x40800100, 2035, 0x40800300, 1708,
                        0x42804000, 0x0, 0X42808000, 0x0" />
 
+        <Config
+            Id="0x000011A0" Type="1" Enable="true" Timeout="500" Target="cliffs"
+            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
+                       0x40800000, 2073, 0x40800100, 1593, 0x40800200, 1900,
+                       0x42804000, 0x0, 0X42808000, 0x0" />
+
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
@@ -1880,6 +1884,12 @@
             Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804300, 0xFFF,
                        0x40800000, 1708, 0x40800100, 2035, 0x40800300, 1708,
                        0x42804000, 0x5, 0X42808000, 0x0" />
+
+        <Config
+            Id="0x000011A0" Type="2" Enable="true" Timeout="500" Target="cliffs"
+            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
+                       0x40800000, 2073, 0x40800100, 1593, 0x40800200, 1900,
+                       0x42804000, 0x0, 0X42808000, 0x0" />
 
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
@@ -1902,6 +1912,7 @@
             Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
                        0x40800000, 2073, 0x40800100, 1593, 0x40800200, 1900,
                        0x42804000, 0x0, 0X42808000, 0x0" />
+
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
@@ -1917,6 +1928,13 @@
             Resources="0x40C00000, 0x1, 0x40804000, 2707, 0x40804100, 2035, 0x40804300, 2707,
                        0x40800000, 1497, 0x40800100, 2035, 0x40800300, 1497,
                        0x42804000, 0x5, 0X42808000, 0x0" />
+
+
+        <Config
+            Id="0x000011A0" Type="11" Enable="true" Timeout="500" Target="cliffs"
+            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
+                       0x40800000, 2073, 0x40800100, 1593, 0x40800200, 1900,
+                       0x42804000, 0x0, 0X42808000, 0x0" />
 
         <!-- Slide on the lock screen -->
         <!-- GPU_MIN_POWER_LEVEL opcode, value-->

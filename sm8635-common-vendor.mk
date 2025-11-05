@@ -622,7 +622,11 @@ PRODUCT_PACKAGES += \
     libaodoptfeature \
     libapengine \
     libappclassifier \
+    libar-acdb \
+    libar-gpr \
+    libar-gsl \
     libarmemlog \
+    libats \
     libaudio_log_utils \
     libaudiocloudctrl \
     libaudiofeaturestats \
@@ -806,6 +810,8 @@ PRODUCT_PACKAGES += \
     liblowi_client \
     liblowi_common \
     liblowi_wifihal \
+    liblx-ar_util \
+    liblx-osal \
     libmapdata_api \
     libmasc \
     libmcs \
@@ -1175,6 +1181,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.data.slm@1.0 \
     vendor.qti.diaghal@1.0_vendor \
     vendor.qti.gnss-V6-ndk \
+    vendor.qti.hardware.AGMIPC@1.0-impl \
     vendor.qti.hardware.ListenSoundModel@1.0-impl \
     vendor.qti.hardware.ListenSoundModel@1.0 \
     vendor.qti.hardware.alarm-V1-ndk \
@@ -1292,6 +1299,7 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.seccam-V1-ndk \
     vendor.xiaomi.hw.touchfeature-V1-ndk_platform \
     vendor.xiaomi.sensor.citsensorservice-V1-ndk \
+    xiaomi.system.hypsys.common-V1-ndk \
     chre_qsh_shim \
     libCalculator_skel \
     libDspIOProxy_skel \
@@ -1366,6 +1374,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.qccsyshal_aidl-halimpl \
     vendor.qti.qccvndhal_aidl-V1-ndk \
     android.hardware.gnss-aidl-impl-qti \
+    com.xiaomi.camdfx \
     consumerir.qcom \
     displayfeature.default \
     libAncHumanVideoBokehV4 \
@@ -1448,6 +1457,7 @@ PRODUCT_PACKAGES += \
     libwvkeybox \
     libxmi_hdr_checker \
     libxmi_slow_motion_mein \
+    vendor.xiaomi.hardware.mediaeventgatherservice-V1-ndk \
     libmialgo_ell_cdsp_skel \
     com.google.android.widevine.nonupdatable \
     CACertService \
@@ -1470,7 +1480,6 @@ PRODUCT_PACKAGES += \
     dpm-saidl.xml \
     mwqem-saidl.xml \
     qesdk-manager.xml \
-    vendor.qti.camera.offlinecamera-impl.xml \
     vendor.qti.camera.postproc-impl.xml \
     vendor.qti.camera.provider.xml \
     vendor.qti.diag.hal.service.xml \

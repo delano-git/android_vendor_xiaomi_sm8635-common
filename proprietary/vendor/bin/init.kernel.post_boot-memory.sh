@@ -8,7 +8,7 @@ enable_thp()
 {
 	# THP enablement settings
 	ProductName=`getprop ro.product.name`
-	if [ "$ProductName" == "muyu" ]; then
+	if [ "$ProductName" == "muyu" ] || [ "$ProductName" == "ruyi" ] || [ "$ProductName" == "zorn" ]; then
 		echo never > /sys/kernel/mm/transparent_hugepage/enabled
 	else
 		echo always > /sys/kernel/mm/transparent_hugepage/enabled

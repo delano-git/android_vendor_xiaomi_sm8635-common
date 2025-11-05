@@ -94,6 +94,12 @@ function set_density_by_fb() {
             "goku")
             setprop vendor.display.lcd_density 480
             ;;
+            "zorn")
+            setprop vendor.display.lcd_density 600
+            ;;
+            "flourite")
+            setprop vendor.display.lcd_density 520
+            ;;
             *)
             setprop vendor.display.lcd_density 440
             ;;
@@ -130,6 +136,12 @@ function set_density_by_fb() {
             ;;
             "goku")
             setprop vendor.display.lcd_density 480
+            ;;
+            "zorn")
+            setprop vendor.display.lcd_density 600
+            ;;
+            "flourite")
+            setprop vendor.display.lcd_density 520
             ;;
         esac
     fi

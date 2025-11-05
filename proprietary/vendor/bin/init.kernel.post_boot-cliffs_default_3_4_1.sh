@@ -178,7 +178,7 @@ echo 0 > /proc/sys/kernel/sched_util_clamp_min_rt_default
 # MIUI MOD: Performance_SmartCPUPolicy
 # cpuset parameters
 echo 0-2 > /dev/cpuset/background/cpus
-# echo 0-2 > /dev/cpuset/system-background/cpus
+#echo 0-2 > /dev/cpuset/system-background/cpus
 echo 0-3 > /dev/cpuset/system-background/cpus
 # END Performance_SmartCPUPolicy
 

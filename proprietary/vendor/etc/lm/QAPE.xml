@@ -181,11 +181,6 @@
          <!--Package Name="com.miHoYo.GenshinImpact" NumThreads="3" /> Genshin USA -->
          <!--Package Name="com.miHoYo.hkrpg" NumThreads="3" />  StarRail -->
         <!--Package Name="com.netease.pm02" NumThreads="3" />  Tianyu -->
-        <Package target="pineapple" Name="com.tencent.tmgp.pubgmhd" NumThreads="2" /> <!-- GP -->
-        <Package target="pineapple" Name="com.tencent.tmgp.pubgmhd" FPS="90" NumThreads="3" /> <!-- GP90 -->
-        <Package target="cliffs" Name="com.tencent.tmgp.pubgmhd" NumThreads="3" /> <!-- GP -->
-        <Package Name="com.tencent.mf.uam" NumThreads="3" /> <!-- Arena Breakout -->
-        <Package Name="com.tencent.lolm" NumThreads="3" /> <!-- LOL China -->
     </PipelinedPackages>
     <IgnoredApps>
         <App>com.google.android.gms</App>

@@ -119,8 +119,6 @@ on fs
     mount vfat /dev/block/bootdevice/by-name/logfs /dev/logfs noatime umask=006,uid=1000,gid=1000
     mount ext4 /dev/block/bootdevice/by-name/rescue /mnt/rescue noatime
     restorecon_recursive /mnt/rescue
-    # add Audio_DataWhale
-    chmod 0666 /dev/xlog
 
 on post-fs
     #Execute virtualization manager
@@ -237,11 +235,19 @@ on post-fs-data
     restorecon /sys/module/metis/parameters/is_break_enable
     chmod 0666 /sys/module/metis/parameters/cold_start_app_tgid
     restorecon /sys/module/metis/parameters/cold_start_app_tgid
+    chmod 0666 /sys/module/metis/parameters/metis_wakeup_enable
+    restorecon /sys/module/metis/parameters/metis_wakeup_enable
+    chmod 0666 /sys/module/metis/parameters/metis_wakeup_task
+    restorecon /sys/module/metis/parameters/metis_wakeup_task
     chmod 0666 /sys/module/metis/parameters/protect_cs
     restorecon /sys/module/metis/parameters/protect_cs
     chmod 0666 /sys/module/metis/parameters/trace_motion_event
     restorecon /sys/module/metis/parameters/trace_motion_event
     chown root system /sys/module/metis/parameters/trace_motion_event
+    chmod 0666 /sys/module/metis/parameters/common_persist_vip_task
+    restorecon /sys/module/metis/parameters/common_persist_vip_task
+    chmod 0666 /sys/module/metis/parameters/clear_persist_vip_task
+    restorecon /sys/module/metis/parameters/clear_persist_vip_task
 
     chmod 0666 /dev/metis_link
     restorecon /dev/metis_link
@@ -262,10 +268,6 @@ on post-fs-data
     restorecon /sys/module/metis/parameters/force_viptask_select_rq
     chmod 0666 /sys/module/metis/parameters/force_cluster_sched_enable
     restorecon /sys/module/metis/parameters/force_cluster_sched_enable
-
-
-    chmod 0666 /sys/module/speed_ui/parameters/speedui_enable
-    restorecon /sys/module/speed_ui/parameters/speedui_enable
 
     chmod 0666 /sys/module/speed_touch/parameters/speed_touch_enable
     restorecon /sys/module/speed_touch/parameters/speed_touch_enable
@@ -339,6 +341,10 @@ on post-fs-data
 
     chmod 0662 /dev/miev
     restorecon /dev/miev
+
+    chmod 0666 /dev/mi_sw_sync
+    restorecon /dev/mi_sw_sync
+
 # MIUI ADD: Performance_BoostFramework
     chown system system /sys/module/perf_helper/mimd/mimdtrigger
 # END Performance_BoostFramework
@@ -413,6 +419,19 @@ on boot
     chmod 0664 /sys/powersave/boost
     # END Power_PowerSaveModeV2
 
+    # MIUI ADD: Power_UnionPowerCore
+    chown root system /sys/unionpower/frame_jank
+    chown root system /sys/module/unionpower/parameters/FRAME_MONITOR_ENABLE
+    chown root system /sys/module/unionpower/parameters/JANK_LIMIT
+    chown root system /sys/module/unionpower/parameters/NICE_MORE_LIMIT
+    chown root system /sys/module/unionpower/parameters/VSYNC_GAP
+    chmod 0664 /sys/unionpower/frame_jank
+    chmod 0664 /sys/module/unionpower/parameters/FRAME_MONITOR_ENABLE
+    chmod 0664 /sys/module/unionpower/parameters/JANK_LIMIT
+    chmod 0664 /sys/module/unionpower/parameters/NICE_MORE_LIMIT
+    chmod 0664 /sys/module/unionpower/parameters/VSYNC_GAP
+    # END Power_UnionPowerCore
+
     #MIUI ADD: Memory_CLD
     #ufscld functions permission
     chown root system /sys/devices/platform/soc/1d84000.ufshc/ufscld/auto_hibern8_enable
@@ -441,6 +460,8 @@ on charger
     write /sys/bus/platform/devices/1d84000.ufshc/clkscale_enable 1
     write /sys/bus/platform/devices/1d84000.ufshc/auto_hibern8 5000
     write /sys/bus/platform/devices/1d84000.ufshc/clkgate_enable 1
+    #Enable poweroff_charger_log
+    setprop persist.sys.offlinelog.poweroff_charger_log true
 
 #service vendor.lowi /vendor/bin/sscrpcd
 #   class core

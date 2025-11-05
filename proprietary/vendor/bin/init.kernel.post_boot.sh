@@ -124,12 +124,11 @@ function configure_memory_parameters() {
 	configure_zram_parameters
 	configure_read_ahead_kb_values
 	echo 100 > /proc/sys/vm/swappiness
-	# modify watermark_scale_factor
 	ProductName=`getprop ro.product.name`
-	if [ "$ProductName" == "muyu" ] || [ "$ProductName" == "uke" ]; then
-		echo 60 > /proc/sys/vm/watermark_scale_factor
+	if [ "$ProductName" == "manet" ]; then
+		echo 43 > /proc/sys/vm/watermark_scale_factor
 	fi
-	
+
 	# Disable periodic kcompactd wakeups. We do not use THP, so having many
 	# huge pages is not as necessary.
 	echo 0 > /proc/sys/vm/compaction_proactiveness
@@ -140,7 +139,14 @@ function configure_memory_parameters() {
 
 	## Goal is to allow all allocations to use THP whilst minimizing allocaiton delays
 	# Allowing all eligibe page faults to use THP is set in the respective soc specific file
-	echo never > /sys/kernel/mm/transparent_hugepage/enabled
+        # MIUI ADD: Performance_MemoryEnhance
+	if [ "$ProductName" == "muyu" ]; then
+		echo never > /sys/kernel/mm/transparent_hugepage/hugepages-64kB/enabled
+		echo 60 > /proc/sys/vm/watermark_scale_factor
+	else
+		echo never > /sys/kernel/mm/transparent_hugepage/enabled
+	fi
+        # END Performance_MemoryEnhance
 	# Prevent page faults on THP-elgible VMAs from causing reclaim or compaction
 	echo never > /sys/kernel/mm/transparent_hugepage/defrag
 
