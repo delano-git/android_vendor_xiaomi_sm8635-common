@@ -17,12 +17,14 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8635-common/proprietary/odm/etc/audio_policy_engine_configuration.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_policy_engine_configuration.xml \
     vendor/xiaomi/sm8635-common/proprietary/odm/etc/audio_policy_engine_default_stream_volumes.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_policy_engine_default_stream_volumes.xml \
     vendor/xiaomi/sm8635-common/proprietary/odm/etc/audio_policy_engine_product_strategies.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_policy_engine_product_strategies.xml \
+    vendor/xiaomi/sm8635-common/proprietary/odm/etc/dolby_vision.cfg:$(TARGET_COPY_OUT_ODM)/etc/dolby_vision.cfg \
     vendor/xiaomi/sm8635-common/proprietary/odm/etc/init.panel_info.sh:$(TARGET_COPY_OUT_ODM)/etc/init.panel_info.sh \
     vendor/xiaomi/sm8635-common/proprietary/odm/etc/init/init.awinic.rc:$(TARGET_COPY_OUT_ODM)/etc/init/init.awinic.rc \
     vendor/xiaomi/sm8635-common/proprietary/odm/etc/init/init.cirrus.rc:$(TARGET_COPY_OUT_ODM)/etc/init/init.cirrus.rc \
     vendor/xiaomi/sm8635-common/proprietary/odm/etc/init/init.foursemi.rc:$(TARGET_COPY_OUT_ODM)/etc/init/init.foursemi.rc \
     vendor/xiaomi/sm8635-common/proprietary/odm/etc/init/init.sia91xx.rc:$(TARGET_COPY_OUT_ODM)/etc/init/init.sia91xx.rc \
     vendor/xiaomi/sm8635-common/proprietary/odm/etc/init/init.xiaomi_hall.rc:$(TARGET_COPY_OUT_ODM)/etc/init/init.xiaomi_hall.rc \
+    vendor/xiaomi/sm8635-common/proprietary/odm/etc/init/vendor.xiaomi.hardware.mediaeventgatherservice.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.xiaomi.hardware.mediaeventgatherservice.rc \
     vendor/xiaomi/sm8635-common/proprietary/odm/etc/init/vendor.xiaomi.hw.touchfeature-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.xiaomi.hw.touchfeature-service.rc \
     vendor/xiaomi/sm8635-common/proprietary/odm/etc/init/vendor.xiaomi.sensor.citsensorservice.aidl.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.xiaomi.sensor.citsensorservice.aidl.rc \
     vendor/xiaomi/sm8635-common/proprietary/odm/etc/izat_device.conf:$(TARGET_COPY_OUT_ODM)/etc/izat_device.conf \
@@ -276,6 +278,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8635-common/proprietary/vendor/etc/init/shsusrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/shsusrd.rc \
     vendor/xiaomi/sm8635-common/proprietary/vendor/etc/init/ssgtzd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ssgtzd.rc \
     vendor/xiaomi/sm8635-common/proprietary/vendor/etc/init/trusteduilistener.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/trusteduilistener.rc \
+    vendor/xiaomi/sm8635-common/proprietary/vendor/etc/init/vendor.dolby.media.c2@1.0-service-vision.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2@1.0-service-vision.rc \
+    vendor/xiaomi/sm8635-common/proprietary/vendor/etc/init/vendor.dolby_3_12.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby_3_12.media.c2@1.0-service.rc \
     vendor/xiaomi/sm8635-common/proprietary/vendor/etc/init/vendor.dpmd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dpmd.rc \
     vendor/xiaomi/sm8635-common/proprietary/vendor/etc/init/vendor.qsap.location.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qsap.location.rc \
     vendor/xiaomi/sm8635-common/proprietary/vendor/etc/init/vendor.qsap.qapeservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qsap.qapeservice.rc \
@@ -442,6 +446,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.qti.diaghal-V1-ndk \
     btaudio_offload_if \
+    c2.dolby.client \
+    c2.dolby.hevc.dec \
+    c2.dolby.hevc.sec.dec \
+    c2.dolby.store \
     camx.device-impl \
     camx.provider-impl \
     com.qti.camx.chiiqutils \
@@ -606,6 +614,9 @@ PRODUCT_PACKAGES += \
     libVoiceSdk \
     libWlanServiceJni \
     libXMFaceFocus \
+    lib_bt_aptx \
+    lib_bt_ble \
+    lib_bt_bundle \
     lib_bt_lhdc \
     lib_misound_asc \
     libadaptlaunch \
@@ -677,6 +688,9 @@ PRODUCT_PACKAGES += \
     libcneapiclient \
     libcneoplookup \
     libcneqmiutils \
+    libcodec2_soft_ac4dec_3_12 \
+    libcodec2_soft_ddpdec_3_12 \
+    libcodec2_store_dolby_3_12 \
     libcom.qti.chinodeutils \
     libcom.xiaomi.attribute \
     libcom.xiaomi.debug \
@@ -714,6 +728,9 @@ PRODUCT_PACKAGES += \
     libdlbpreg \
     libdlbpreg_3_12 \
     libdmshal_3_12 \
+    libdolbydecoderprocessor \
+    libdolbyeglcore \
+    libdolbyottcameracontrol \
     libdpmqmihal \
     libdpp_manager \
     libdpps \
@@ -746,8 +763,6 @@ PRODUCT_PACKAGES += \
     libgpu_tonemapper \
     libgpudataproducer \
     libgralloc.qti \
-    libgralloccore \
-    libgrallocutils \
     libgsl \
     libhalide_hexagon_host \
     libhdcp1prov \
@@ -1078,6 +1093,7 @@ PRODUCT_PACKAGES += \
     libubifocus \
     libubwcp \
     libultrasound_notify \
+    libutils_vendor \
     libvega_common \
     libvideoBokeh \
     libvideodiedobserver_vendor \
@@ -1298,7 +1314,6 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.seccam-V1-ndk \
     vendor.xiaomi.hw.touchfeature-V1-ndk_platform \
     vendor.xiaomi.sensor.citsensorservice-V1-ndk \
-    xiaomi.system.hypsys.common-V1-ndk \
     chre_qsh_shim \
     libCalculator_skel \
     libDspIOProxy_skel \
@@ -1471,6 +1486,7 @@ PRODUCT_PACKAGES += \
     dpmapi \
     android.hardware.drm-service.xml \
     android.hardware.security.keymint-service-qti.xml \
+    bluetooth_audio_qti.xml \
     bttpi-saidl.xml \
     c2_manifest_vendor.xml \
     c2_manifest_vendor_audio.xml \
@@ -1507,6 +1523,7 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.dynamiccameraserver.xml \
     vendor.xiaomi.hardware.quickcamera.xml \
     vendor.qti.qccsyshal_aidl-service.xml \
+    vendor.xiaomi.hardware.mediaeventgatherservice.xml \
     vendor.xiaomi.hw.touchfeature-service.xml \
     vendor.xiaomi.sensor.citsensorservice.aidl.xml \
     adpl \
@@ -1530,9 +1547,11 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1-service-qti \
     android.hardware.gatekeeper-service-qti \
     android.hardware.security.keymint-service-qti \
+    dolbycodec2 \
     pasrknob \
     sxrservice \
     vendor.dolby.dms.service \
+    vendor.dolby_3_12.media.c2@1.0-service \
     vendor.qti.camera.provider-service_64 \
     vendor.qti.hardware.alarm-service \
     vendor.qti.hardware.capabilityconfigstore@1.0-service \
@@ -1639,6 +1658,7 @@ PRODUCT_PACKAGES += \
     qccsyshal_aidl-service \
     tcmd \
     wfdservice64 \
+    vendor.xiaomi.hardware.mediaeventgatherservice-service \
     vendor.xiaomi.hw.touchfeature-service \
     vendor.xiaomi.sensor.citsensorservice.aidl \
     init.mi.serial \
