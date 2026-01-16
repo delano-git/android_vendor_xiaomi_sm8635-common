@@ -1314,35 +1314,35 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.seccam-V1-ndk \
     vendor.xiaomi.hw.touchfeature-V1-ndk_platform \
     vendor.xiaomi.sensor.citsensorservice-V1-ndk \
-    chre_qsh_shim \
-    libCalculator_skel \
-    libDspIOProxy_skel \
-    libQnnHtpV73 \
-    libQnnHtpV73QemuDriver \
-    libQnnHtpV73Skel \
-    libQnnHtpV75 \
-    libQnnHtpV75Skel \
-    libQnnSaver \
-    libQnnSystem \
-    libSnpeHtpV73Skel \
-    libSnpeHtpV75Skel \
-    libadsp_jpege_skel \
-    libarc_htp_driver_skel \
-    libbitml_nsp_skel \
-    libdsp_streamer_binning \
-    libdsp_streamer_qvrcam_receiver \
-    libeye_tracking_dsp_sample_skel \
-    libhalide_hexagon_remote_skel \
-    libmctfengine_skel \
-    libmialgo_basic_cdsp_skel \
-    libmialgo_rfs_cdsp_skel \
-    libmlawbpostproc_dsp_skel \
-    libqvr_3dof_tracker_skel \
-    libqvr_cam_dsp_driver_skel \
-    libqvr_dsp_driver_skel \
-    libtracker_6dof_skel_8450 \
-    nearby.napp_header \
-    nearby \
+    vendor_lib_rfsa_adsp_chre_qsh_shim_so \
+    vendor_lib_rfsa_adsp_libCalculator_skel_so \
+    vendor_lib_rfsa_adsp_libDspIOProxy_skel_so \
+    vendor_lib_rfsa_adsp_libQnnHtpV73_so \
+    vendor_lib_rfsa_adsp_libQnnHtpV73QemuDriver_so \
+    vendor_lib_rfsa_adsp_libQnnHtpV73Skel_so \
+    vendor_lib_rfsa_adsp_libQnnHtpV75_so \
+    vendor_lib_rfsa_adsp_libQnnHtpV75Skel_so \
+    vendor_lib_rfsa_adsp_libQnnSaver_so \
+    vendor_lib_rfsa_adsp_libQnnSystem_so \
+    vendor_lib_rfsa_adsp_libSnpeHtpV73Skel_so \
+    vendor_lib_rfsa_adsp_libSnpeHtpV75Skel_so \
+    vendor_lib_rfsa_adsp_libadsp_jpege_skel_so \
+    vendor_lib_rfsa_adsp_libarc_htp_driver_skel_so \
+    vendor_lib_rfsa_adsp_libbitml_nsp_skel_so \
+    vendor_lib_rfsa_adsp_libdsp_streamer_binning_so \
+    vendor_lib_rfsa_adsp_libdsp_streamer_qvrcam_receiver_so \
+    vendor_lib_rfsa_adsp_libeye_tracking_dsp_sample_skel_so \
+    vendor_lib_rfsa_adsp_libhalide_hexagon_remote_skel_so \
+    vendor_lib_rfsa_adsp_libmctfengine_skel_so \
+    vendor_lib_rfsa_adsp_libmialgo_basic_cdsp_skel_so \
+    vendor_lib_rfsa_adsp_libmialgo_rfs_cdsp_skel_so \
+    vendor_lib_rfsa_adsp_libmlawbpostproc_dsp_skel_so \
+    vendor_lib_rfsa_adsp_libqvr_3dof_tracker_skel_so \
+    vendor_lib_rfsa_adsp_libqvr_cam_dsp_driver_skel_so \
+    vendor_lib_rfsa_adsp_libqvr_dsp_driver_skel_so \
+    vendor_lib_rfsa_adsp_libtracker_6dof_skel_8450_so \
+    vendor_lib_rfsa_adsp_nearby_napp_header \
+    vendor_lib_rfsa_adsp_nearby_so \
     com.qualcomm.qti.dpm.api@1.0 \
     libdiag_system \
     libdpmctmgr \
@@ -1422,6 +1422,7 @@ PRODUCT_PACKAGES += \
     libcamera_scene \
     libclient2slpi.notifier \
     libcolortempmode \
+    libcorn \
     libcrussp \
     libdisplaycount \
     libdisplaylog \
@@ -1434,6 +1435,8 @@ PRODUCT_PACKAGES += \
     libhandgesture.arcsoft \
     libhistprocess \
     liblocalFlickerDet \
+    libmace \
+    libmars \
     libmi-stc-HW-modulate \
     libmiBrightness \
     libmiClstc \
@@ -1443,6 +1446,7 @@ PRODUCT_PACKAGES += \
     libmi_dspp \
     libmiai_deblur \
     libmiaio_head_seg \
+    libmialgo_aio_seg \
     libmialgo_ie_capture \
     libmialgo_sd \
     libmialgo_utils \
@@ -1450,16 +1454,20 @@ PRODUCT_PACKAGES += \
     libmieventnodewatch \
     libmiocr \
     libmiphone_capture_bokeh \
+    libonnxruntime \
     libpaperMode \
     libportrait_repair_qnn \
     libremosaic_wrapper \
     libremosaiclib \
     librfs_warp \
     librhytheyecare \
+    libscd \
     libsdr2hdr \
+    libspacespeech_sdk \
     libsre \
     libsupermoon \
     libtensorflowlite_touch_c \
+    libtouchreport \
     libtouchsensor \
     libtruetone \
     libvideomode \
@@ -1472,7 +1480,7 @@ PRODUCT_PACKAGES += \
     libxmi_hdr_checker \
     libxmi_slow_motion_mein \
     vendor.xiaomi.hardware.mediaeventgatherservice-V1-ndk \
-    libmialgo_ell_cdsp_skel \
+    odm_lib_rfsa_adsp_libmialgo_ell_cdsp_skel_so \
     com.google.android.widevine.nonupdatable \
     CACertService \
     CneApp \
