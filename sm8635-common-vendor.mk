@@ -28,6 +28,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8635-common/proprietary/odm/etc/init/vendor.xiaomi.hw.touchfeature-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.xiaomi.hw.touchfeature-service.rc \
     vendor/xiaomi/sm8635-common/proprietary/odm/etc/init/vendor.xiaomi.sensor.citsensorservice.aidl.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.xiaomi.sensor.citsensorservice.aidl.rc \
     vendor/xiaomi/sm8635-common/proprietary/odm/etc/izat_device.conf:$(TARGET_COPY_OUT_ODM)/etc/izat_device.conf \
+    vendor/xiaomi/sm8635-common/proprietary/odm/etc/touch/Pencil_Posture.xml:$(TARGET_COPY_OUT_ODM)/etc/touch/Pencil_Posture.xml \
     vendor/xiaomi/sm8635-common/proprietary/odm/etc/touch/stylus_game_config.json:$(TARGET_COPY_OUT_ODM)/etc/touch/stylus_game_config.json \
     vendor/xiaomi/sm8635-common/proprietary/odm/etc/ueventd.rc:$(TARGET_COPY_OUT_ODM)/etc/ueventd.rc \
     vendor/xiaomi/sm8635-common/proprietary/odm/firmware/CAMERA_ICP.b00:$(TARGET_COPY_OUT_ODM)/firmware/CAMERA_ICP.b00 \
@@ -684,6 +685,7 @@ PRODUCT_PACKAGES += \
     libchilog \
     libclstc_algorithm_adapter \
     libclstc_gcp_adapter \
+    libclstc_tm \
     libcne \
     libcneapiclient \
     libcneoplookup \
@@ -934,8 +936,6 @@ PRODUCT_PACKAGES += \
     libprefapps \
     libprekill \
     libprocomp \
-    libprotobuf-cpp-full-21.7 \
-    libprotobuf-cpp-lite-21.7 \
     libpsmoptfeature \
     libq-perflog \
     libqape_oem_ext \
@@ -1082,7 +1082,7 @@ PRODUCT_PACKAGES += \
     libsysmon_cdsp_skel \
     libsystem_health_mon \
     libtaautoload \
-    libtensorflowlite_c \
+    libtensorflowlite_c_vendor \
     libtestutils \
     libthermalclient \
     libthreadutils \

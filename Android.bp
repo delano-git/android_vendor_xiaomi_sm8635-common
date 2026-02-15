@@ -539,7 +539,7 @@ cc_prebuilt_library_shared {
                 "libdeflicker",
                 "libceres",
                 "libomp",
-                "libtinyxml2",
+                "libtinyxml2_1",
                 "libz",
                 "libc",
                 "libm",
@@ -5745,7 +5745,7 @@ cc_prebuilt_library_shared {
                 "libEGL",
                 "libGLESv2",
                 "libGLESv3",
-                "libtensorflowlite_c",
+                "libtensorflowlite_c_vendor",
                 "libm",
                 "libc",
             ],
@@ -6254,7 +6254,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "liblog",
                 "libbinder",
-                "libtinyxml2",
+                "libtinyxml2_1",
                 "libpowercore",
                 "libdisplayconfig.qti",
                 "libhidlbase",
@@ -6293,7 +6293,7 @@ cc_prebuilt_library_shared {
                 "libhwbinder",
                 "libhidlbase",
                 "libutils",
-                "libtinyxml2",
+                "libtinyxml2_1",
                 "libthermalclient",
                 "liblmthermallistner",
                 "libqti-qesdk-secure",
@@ -6524,7 +6524,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "liblog",
                 "libcutils",
-                "libtinyxml2",
+                "libtinyxml2_1",
                 "libc++",
                 "libc",
                 "libm",
@@ -7641,7 +7641,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "liblog",
                 "libVoiceSdk",
-                "libtensorflowlite_c",
+                "libtensorflowlite_c_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -7947,6 +7947,37 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libutils",
                 "libdisplaydebug",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libclstc_tm",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libclstc_tm.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libdisplaydebug",
+                "libtinyxml2_1",
+                "libsdmutils",
+                "libdisplayskuutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -9522,7 +9553,7 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libbinder",
                 "libdrm",
-                "libtinyxml2",
+                "libtinyxml2_1",
                 "libdisplaydebug",
                 "libhidlbase",
                 "android.frameworks.sensorservice@1.0",
@@ -10134,7 +10165,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "liblog",
                 "libbinder",
-                "libtinyxml2",
+                "libtinyxml2_1",
                 "libpowercore",
                 "libdisplayconfig.qti",
                 "libhidlbase",
@@ -11466,7 +11497,7 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libcutils",
                 "libutils",
-                "libtinyxml2",
+                "libtinyxml2_1",
                 "libsqlite",
                 "libperfgluelayer",
                 "libc++",
@@ -11525,7 +11556,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "liblog",
                 "libVoiceSdk",
-                "libtensorflowlite_c",
+                "libtensorflowlite_c_vendor",
                 "libc++",
                 "libc",
                 "libm",
@@ -13104,7 +13135,7 @@ cc_prebuilt_library_shared {
                 "vendor.xiaomi.hardware.camera.injection-client",
                 "libbase",
                 "libbinder_ndk",
-                "libtinyxml2",
+                "libtinyxml2_1",
                 "libmicamera_aidl_device",
                 "libmicamera_aidl_utils",
                 "libcom.xiaomi.metadatautils",
@@ -15097,7 +15128,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "liblog",
                 "libbinder",
-                "libtinyxml2",
+                "libtinyxml2_1",
                 "libpowercore",
                 "libdisplayconfig.qti",
                 "libhidlbase",
@@ -15656,7 +15687,7 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "libhidltransport",
                 "libpowercore",
-                "libtinyxml2",
+                "libtinyxml2_1",
                 "vendor.qti.hardware.perf2-V1-ndk",
                 "libbinder_ndk",
                 "vendor.qti.hardware.power.powermodule-V1-ndk",
@@ -15688,7 +15719,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "liblog",
                 "libbinder",
-                "libtinyxml2",
+                "libtinyxml2_1",
                 "vendor.display.config@1.0",
                 "libhidlbase",
                 "libc++",
@@ -15803,57 +15834,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libprotobuf-cpp-full-21.7",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libprotobuf-cpp-full-21.7.so",
-            ],
-            shared_libs: [
-                "libz",
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libprotobuf-cpp-lite-21.7",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libprotobuf-cpp-lite-21.7.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libpsmoptfeature",
     owner: "xiaomi",
     strip: {
@@ -15869,7 +15849,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "liblog",
                 "libbinder",
-                "libtinyxml2",
+                "libtinyxml2_1",
                 "libpowercore",
                 "libdisplayconfig.qti",
                 "libhidlbase",
@@ -19345,7 +19325,7 @@ cc_prebuilt_library_shared {
                 "libdisplaydebug",
                 "libsdm-color",
                 "libbinder",
-                "libtinyxml2",
+                "libtinyxml2_1",
                 "libsdmutils",
                 "libdrm",
                 "libdigital-dimming",
@@ -19920,7 +19900,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "liblog",
                 "libbinder",
-                "libtinyxml2",
+                "libtinyxml2_1",
                 "libpowercore",
                 "libc++",
                 "libc",
@@ -20290,7 +20270,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libtensorflowlite_c",
+    name: "libtensorflowlite_c_vendor",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -20298,7 +20278,7 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/libtensorflowlite_c.so",
+                "proprietary/vendor/lib64/libtensorflowlite_c_vendor.so",
             ],
             shared_libs: [
                 "libm",
@@ -20743,7 +20723,7 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "liblog",
                 "libbinder",
-                "libtinyxml2",
+                "libtinyxml2_1",
                 "libpowercore",
                 "libdisplayconfig.qti",
                 "libhidlbase",
@@ -27840,6 +27820,7 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib64/libwfdnative.so",
             ],
             shared_libs: [
+                "libinput_shim",
                 "libandroid_runtime",
                 "libui",
                 "libinput",
@@ -28286,7 +28267,7 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so",
             ],
             shared_libs: [
-                "libprotobuf-cpp-full",
+                "libprotobuf-cpp-full-21.7",
                 "libcutils",
                 "liblog",
                 "libhidlbase",
@@ -28623,7 +28604,7 @@ cc_prebuilt_library_shared {
                 "libhidltransport",
                 "libhidlbase",
                 "android.frameworks.sensorservice@1.0",
-                "libtinyxml2",
+                "libtinyxml2_1",
                 "libhardware",
                 "android.hardware.graphics.allocator@2.0",
                 "android.hardware.graphics.allocator@3.0",
@@ -32543,7 +32524,7 @@ cc_prebuilt_binary {
                 "android.hardware.common.fmq-V1-ndk",
                 "android.hidl.allocator@1.0",
                 "android.hidl.memory@1.0",
-                "libtinyxml2",
+                "libtinyxml2_1",
                 "libutilscallstack",
                 "libc++",
                 "libc",
@@ -32713,7 +32694,7 @@ cc_prebuilt_binary {
                 "vendor.qti.hardware.display.mapperextensions@1.3",
                 "libgrallocutils",
                 "libclient2slpi.notifier",
-                "libtinyxml2",
+                "libtinyxml2_1",
                 "vendor.xiaomi.hardware.display.mihwcextension-V1-ndk",
                 "libc++",
                 "libc",
@@ -33881,7 +33862,7 @@ cc_prebuilt_binary {
                 "libhidlbase",
                 "libhidltransport",
                 "libpowercore",
-                "libtinyxml2",
+                "libtinyxml2_1",
                 "vendor.qti.hardware.perf2-V1-ndk",
                 "libbinder_ndk",
                 "vendor.qti.hardware.power.powermodule-V1-ndk",
@@ -34454,7 +34435,7 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/qvrdatauploader",
             ],
             shared_libs: [
-                "libtinyxml2",
+                "libtinyxml2_1",
                 "liblog",
                 "libqvrservice_client.qti",
                 "libutils",
@@ -35459,6 +35440,7 @@ cc_prebuilt_binary {
                 "libutils",
                 "libbase",
                 "liblog",
+                "libxml2",
                 "libbinder_ndk",
                 "vendor.xiaomi.hw.touchfeature-V1-ndk_platform",
                 "android.frameworks.sensorservice@1.0",
@@ -35499,7 +35481,7 @@ cc_prebuilt_binary {
                 "libhardware",
                 "libbase",
                 "libsnsapi",
-                "libtinyxml2",
+                "libtinyxml2_1",
                 "libjsoncpp",
                 "libsensorslog",
                 "libbinder_ndk",
