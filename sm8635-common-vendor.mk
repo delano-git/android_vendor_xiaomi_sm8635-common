@@ -122,8 +122,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8635-common/proprietary/system_ext/etc/seccomp_policy/wfdservice64.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/wfdservice64.policy \
     vendor/xiaomi/sm8635-common/proprietary/system_ext/etc/wfdconfigsink.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/wfdconfigsink.xml \
     vendor/xiaomi/sm8635-common/proprietary/vendor/etc/Hapticsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/Hapticsconfig.xml \
-    vendor/xiaomi/sm8635-common/proprietary/vendor/etc/acdbdata/cliffs_mtp/MTP_cliffs_acdb_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/cliffs_mtp/MTP_cliffs_acdb_cal.acdb \
-    vendor/xiaomi/sm8635-common/proprietary/vendor/etc/acdbdata/cliffs_mtp/MTP_cliffs_workspaceFileXml.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/cliffs_mtp/MTP_cliffs_workspaceFileXml.qwsp \
     vendor/xiaomi/sm8635-common/proprietary/vendor/etc/acdbdata/cliffs_mtp_wcd9395_cliffs7/MTP_cliffs7_wcd9395_acdb_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/cliffs_mtp_wcd9395_cliffs7/MTP_cliffs7_wcd9395_acdb_cal.acdb \
     vendor/xiaomi/sm8635-common/proprietary/vendor/etc/acdbdata/cliffs_mtp_wcd9395_cliffs7/MTP_cliffs7_wcd9395_workspaceFileXml.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/cliffs_mtp_wcd9395_cliffs7/MTP_cliffs7_wcd9395_workspaceFileXml.qwsp \
     vendor/xiaomi/sm8635-common/proprietary/vendor/etc/acdbdata/cliffs_mtp_wsa883x_cliffs7/MTP_cliffs7_acdb_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/cliffs_mtp_wsa883x_cliffs7/MTP_cliffs7_acdb_cal.acdb \
@@ -615,9 +613,6 @@ PRODUCT_PACKAGES += \
     libVoiceSdk \
     libWlanServiceJni \
     libXMFaceFocus \
-    lib_bt_aptx \
-    lib_bt_ble \
-    lib_bt_bundle \
     lib_bt_lhdc \
     lib_misound_asc \
     libadaptlaunch \
@@ -626,18 +621,12 @@ PRODUCT_PACKAGES += \
     libadreno_utils \
     libadsp_default_listener \
     libadsprpc \
-    libagm \
-    libagmmixer \
     libaidenoiser \
     libaidenoiserv2 \
     libaodoptfeature \
     libapengine \
     libappclassifier \
-    libar-acdb \
-    libar-gpr \
-    libar-gsl \
     libarmemlog \
-    libats \
     libaudio_log_utils \
     libaudiocloudctrl \
     libaudiofeaturestats \
@@ -790,7 +779,6 @@ PRODUCT_PACKAGES += \
     libizat_core \
     libjnihelper \
     libjpege \
-    libkaraokepal \
     libkcl \
     libkernelmanager \
     libkeymasterdeviceutils \
@@ -826,8 +814,6 @@ PRODUCT_PACKAGES += \
     liblowi_client \
     liblowi_common \
     liblowi_wifihal \
-    liblx-ar_util \
-    liblx-osal \
     libmapdata_api \
     libmasc \
     libmcs \
@@ -1196,7 +1182,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.data.slm@1.0 \
     vendor.qti.diaghal@1.0_vendor \
     vendor.qti.gnss-V6-ndk \
-    vendor.qti.hardware.AGMIPC@1.0-impl \
     vendor.qti.hardware.ListenSoundModel@1.0-impl \
     vendor.qti.hardware.ListenSoundModel@1.0 \
     vendor.qti.hardware.alarm-V1-ndk \
@@ -1240,7 +1225,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.limits@1.2 \
     vendor.qti.hardware.mwqemadapter@1.0 \
     vendor.qti.hardware.mwqemadapteraidlservice-V1-ndk \
-    vendor.qti.hardware.pal@1.0-impl \
     vendor.qti.hardware.perf2-V1-ndk \
     vendor.qti.hardware.power.powermodule-V1-ndk \
     vendor.qti.hardware.qccsyshal@1.0_vendor \
@@ -1423,7 +1407,6 @@ PRODUCT_PACKAGES += \
     libclient2slpi.notifier \
     libcolortempmode \
     libcorn \
-    libcrussp \
     libdisplaycount \
     libdisplaylog \
     libdither \
